@@ -4,6 +4,7 @@
 [![Issues](https://img.shields.io/github/issues/syedbacchu/coinpayment-laravel.svg?style=flat-square)](https://github.com/syedbacchu/coinpayment-laravel)
 [![Stars](https://img.shields.io/github/stars/syedbacchu/coinpayment-laravel.svg?style=social)](https://github.com/syedbacchu/coinpayment-laravel)
 [![Stars](https://img.shields.io/github/forks/syedbacchu/coinpayment-laravel?style=flat-square)](https://github.com/syedbacchu/coinpayment-laravel)
+[![Total Downloads](https://img.shields.io/packagist/dt/sdtech/coinpayments-laravel.svg?style=flat-square)](https://packagist.org/packages/sdtech/coinpayments-laravel)
 
 - [About](#about)
 - [Requirements](#requirements)
