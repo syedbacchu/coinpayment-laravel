@@ -1,2 +1,2 @@
 # coinpayment-laravel
-coinpayments api integration with laravel
+ coinpayments api integration with laravel
