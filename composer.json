@@ -27,6 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
+
                 "Sdtech\\CoinpaymentsLaravel\\Providers\\CoinPaymentServiceProviders"
             ]
         }
