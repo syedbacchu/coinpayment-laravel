@@ -48,7 +48,8 @@ class CoinPaymentServiceProviders extends ServiceProvider
     protected function publishFiles()
     {
         $this->publishes([
-            __DIR__ . '/../Config/coinpayments.php' => config_path('coinpayments.php')]);
+            __DIR__ . '/../Config/coinpayments.php' => config_path('coinpayments.php'),
+            ], 'coinPaymentLaravel');
     }
 
 }
