@@ -122,7 +122,7 @@ class CoinPaymentLaravelService
             'currency2' => $currency2,
             'buyer_email' => $buyer_email,
             'address' => $address,
-            'ipn_url' => $ipn_url,
+            'ipn_url' => !empty($ipn_url) ? $ipn_url : $this->ipn_url,
         );
         return $this->api_call('create_transaction', $req);
     }
@@ -135,7 +135,7 @@ class CoinPaymentLaravelService
     public function getCallbackAddress($currency, $ipn_url = '') {
         $req = array(
             'currency' => $currency,
-            'ipn_url' => $ipn_url,
+            'ipn_url' => !empty($ipn_url) ? $ipn_url : $this->ipn_url,
         );
         return $this->api_call('get_callback_address', $req);
     }
@@ -154,7 +154,7 @@ class CoinPaymentLaravelService
             'currency' => $currency,
             'address' => $address,
             'auto_confirm' => $auto_confirm ? 1:0,
-            'ipn_url' => $ipn_url,
+            'ipn_url' => !empty($ipn_url) ? $ipn_url : $this->ipn_url,
         );
         return $this->api_call('create_withdrawal', $req);
     }
