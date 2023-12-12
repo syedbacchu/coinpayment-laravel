@@ -148,13 +148,14 @@ class CoinPaymentLaravelService
      * @param auto_confirm If auto_confirm is TRUE, then the withdrawal will be performed without an email confirmation.
      * @param ipn_url Optionally set an IPN handler to receive notices about this transaction. If ipn_url is empty then it will use the default IPN URL in your account.
      */
-    public function createWithdrawal($amount, $currency, $address, $auto_confirm = FALSE, $ipn_url = '') {
+    public function createWithdrawal($amount, $currency, $address, $auto_confirm = FALSE, $ipn_url = '',$dest_tag="") {
         $req = array(
             'amount' => $amount,
             'currency' => $currency,
             'address' => $address,
             'auto_confirm' => $auto_confirm ? 1:0,
             'ipn_url' => !empty($ipn_url) ? $ipn_url : $this->ipn_url,
+            'dest_tag' => !empty($dest_tag) ? $dest_tag : ""
         );
         return $this->api_call('create_withdrawal', $req);
     }
